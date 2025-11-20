@@ -33,7 +33,7 @@ num_instance_classes = 13
 num_semantic_classes = 13
 
 model = dict(
-    type='S3DISOneFormer3D', # 定义于 oneformer3d/oneformer3d.py，指定模型主类，实现 S3DIS 数据集上的 3D 全景分割逻辑。
+    type='S3DISOneFormer3D', # 定义于 oneformer3d/oneformer3d.py，指定模型主类(没有超参数，只有架子)，实现 S3DIS 数据集上的 3D 全景分割逻辑。
     data_preprocessor=dict(type='Det3DDataPreprocessor'), # 定义文件：mmdet3d/models/data_preprocessors/det3d_data_preprocessor.py.作用：3D 检测数据预处理器，负责归一化、设备转换等。
     in_channels=6,
     num_channels=num_channels,
