@@ -175,6 +175,7 @@ test_pipeline = [
 ]
 
 # run settings
+# dataloader 是 “管理者”，负责批量调度和线程管理；S3DISSegDataset_ 是 “执行者”，负责具体的数据读取和预处理。二者通过 type 参数绑定，职责互补，不存在冲突，共同构成了完整的数据加载流程。
 train_dataloader = dict(
     batch_size=2,
     num_workers=3,
